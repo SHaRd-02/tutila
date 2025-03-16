@@ -1,6 +1,7 @@
 :root{
     --background-color: rgba(240, 240, 240);
     --primary-color: rgba( 40, 40, 40);
+    --calentar-color: rgba(255, 159, 0, 1);
 }
 
 
@@ -155,6 +156,8 @@ button.close:hover {
     line-height: 1.5;
     margin-bottom: 10px;
     padding: 0 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
 }
 
 /* Estilos para las imágenes de los pasos */
@@ -166,33 +169,87 @@ button.close:hover {
 }
 
 /* Colores específicos según acción */
-.step.cortar {
-    background-color: rgba(255, 0, 0, 0.1);
+.step.cortar, .cortar{
+    background-color: rgba(255, 0, 0, 0.5);
 }
 
-.step.untar {
-    background-color: rgba(255, 165, 0, 0.1);
+.step.untar, .untar{
+    background-color: rgba(255, 242, 0, 0.719);
 }
 
-.step.cocinar {
-    background-color: rgba(34, 139, 34, 0.1);
+.step.cocinar, .cocinar{
+    background-color: rgba(34, 139, 34, 0.5);
 }
 
-.step.prender {
-    background-color: rgba(0, 0, 255, 0.1);
+.step.prender, .prender{
+    background-color: rgba(0, 0, 255, 0.5);
 }
 
+.calentar {
+    background-color: var(--calentar-color);
+}
+
+.step.calentar-parrilla, .calentar-parrilla{
+    background-color: var(--calentar-color);
+    opacity: 0.8;
+    background-image:  linear-gradient(135deg, #feffff 25%, transparent 25%), linear-gradient(225deg, #feffff 25%, transparent 25%), linear-gradient(45deg, #feffff 25%, transparent 25%), linear-gradient(315deg, #feffff 25%, rgba(255, 159, 0, 1) 25%);
+    background-position:  10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
+    color: aliceblue;
+}
+
+.step.calentar-micro .calentar-micro{
+    background-color: var(--calentar-color);
+    opacity: 0.8;
+    background: repeating-linear-gradient( 45deg, #feffff, #feffff 5px, rgba(255, 159, 0, 1) 5px, rgba(255, 159, 0, 1) 25px );
+}
+
+.step.calentar-air .calentar-air{
+    background-color: var(--calentar-color);
+    opacity: 0.8;
+    background-image: radial-gradient(#feffff 0.5px, rgba(255, 159, 0, 1) 0.5px);
+    background-size: 10px 10px;
+}
+
+
+#color-code-nav{
+    text-decoration: none;
+    border: solid 1px lightgray;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px auto;
+
+}
+
+#color-code-nav > li{
+    margin: 2px;
+    width: 5em;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: #333;
+    
+}
 
 @media screen and (max-width: 480px){
 
 
     .menu-item{
-        width: 45%;
-        margin: 5px;
+        width: 40%;
+        margin: 5pxk;
     }
 
     .menu-item-img{
-        width: 160px;
+        width: 85%;
         height: 100px;
     }
 
@@ -220,7 +277,26 @@ button.close:hover {
 
     dialog{
         top: 300px;
-        max-height: 600px;
+        max-height: 500px;
     }
 
+    #color-code-nav{
+        justify-content: flex-start;
+        width: 80%;
+    }
+
+
+}
+
+@media screen and (max-width: 768px){
+
+    .menu-item-img{
+        width: 85%;
+        height: 150px;
+    }
+
+    dialog{
+        top: 250px;
+        max-height: 300px;
+    }
 }

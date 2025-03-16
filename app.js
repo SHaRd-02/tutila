@@ -1,4 +1,5 @@
 // Estructura de datos para las recetas
+
 const recipes = {
     "Mega Burger": {
       image: "https://www.allrecipes.com/thmb/5JVfA7MxfTUPfRerQMdF-nGKsLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/25473-the-perfect-basic-burger-DDMFS-4x3-56eaba3833fd4a26a82755bcd0be0c54.jpg", // Imagen específica para Mega Burger
@@ -20,6 +21,7 @@ const recipes = {
         }
       ]
     },
+    
     // Agrega más recetas según sea necesario
 
     "Bagel pollo": {
@@ -51,6 +53,38 @@ const recipes = {
             }
         ]
     },
+
+    "Ciabatta pollo": {
+        image: "img/ciabattaPolloPesto.jpeg",
+        steps: [
+            {
+                action: "cortar",
+                description: "Cortar el pan de ciatta por la mitad",
+                image: "https://d2t88cihvgacbj.cloudfront.net/manage/wp-content/uploads/2020/05/Sourdough-Hamburger-Buns-3.jpg?x29814",
+
+            },
+
+            {
+                action: "prender",
+                description: "Prender la parrila a maxima temperatura",
+                image: "https://i.ytimg.com/vi/Q9jfFuhtjAE/maxresdefault.jpg",
+            }, 
+
+            {
+                action: "untar",
+                description: "Unta mayonesa en la base y la tapa del pan.",
+                image: "https://www.seriouseats.com/thmb/AGCa7Jvg2iytUFUjvzpHVGif8cU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20240625-CaesarMayo-AmandaSuarez-hero-045d48ad4d634082b003f13776b3b375.jpg"
+            },
+
+            {
+                action: "calentar-parrilla",
+                description: "calentar el pan y el pollo en la parilla",
+                image: "https://www.allrecipes.com/thmb/20oHyMihsHIjkJ9PS5PWDP0db60=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/16160-juicy-grilled-chicken-breasts-ddmfs-5566-04-3x4-270ab4d4e6a543de85ba54f6dc247147.jpg"
+            },
+
+            
+        ]
+    }
   };
   
   // Función para generar el menú
