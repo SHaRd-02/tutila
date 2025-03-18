@@ -199,13 +199,13 @@ button.close:hover {
     color: aliceblue;
 }
 
-.step.calentar-micro .calentar-micro{
+.step.calentar-micro, .calentar-micro{
     background-color: var(--calentar-color);
     opacity: 0.8;
     background: repeating-linear-gradient( 45deg, #feffff, #feffff 5px, rgba(255, 159, 0, 1) 5px, rgba(255, 159, 0, 1) 25px );
 }
 
-.step.calentar-air .calentar-air{
+.step.calentar-air, .calentar-air{
     background-color: var(--calentar-color);
     opacity: 0.8;
     background-image: radial-gradient(#feffff 0.5px, rgba(255, 159, 0, 1) 0.5px);
@@ -228,9 +228,10 @@ button.close:hover {
 
 }
 
-#color-code-nav > li{
+.color-menu-item{
     margin: 2px;
-    width: 5em;
+    width: 10em;
+    display: block;
     text-align: center;
     text-decoration: none;
     list-style: none;
